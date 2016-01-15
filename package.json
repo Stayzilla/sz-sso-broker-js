@@ -1,0 +1,22 @@
+{
+  "name": "sz-sso-broker-js",
+  "version": "1.0.0",
+  "description": "Node.js broker for Stayzilla SSO service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Stayzilla/sz-sso-broker-js.git"
+  },
+  "author": "Ramnique Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stayzilla/sz-sso-broker-js/issues"
+  },
+  "homepage": "https://github.com/Stayzilla/sz-sso-broker-js#readme",
+  "dependencies": {
+    "request": "^2.67.0"
+  }
+}
