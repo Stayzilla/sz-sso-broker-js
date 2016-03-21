@@ -23,14 +23,14 @@ SSO.prototype.getAttachUrl = function (token, ip, returnurl) {
             'attach', params.token, params.ts, params.ip, this.secret
         ].join('')).digest('hex');
 
-    return this.server + '/v1/attach?' + qs.stringify(params);
+    return this.server + '/sso/attach?' + qs.stringify(params);
 };
 
 SSO.prototype.getUserInfo = function (token) {
     var that = this;
     return new Promise(function (resolve, reject) {
         request({
-            url: that.server + '/v1/userinfo',
+            url: that.server + '/sso/userinfo',
             qs: {
                 session_key: getSessionKey(that.broker, token, that.secret)
             }
@@ -54,7 +54,7 @@ SSO.prototype.logout = function (token) {
     var that = this;
     return new Promise(function (resolve, reject) {
         request({
-            url: that.server + '/v1/logout',
+            url: that.server + '/sso/logout',
             method: 'post',
             qs: {
                 session_key: getSessionKey(that.broker, token, that.secret)
